@@ -1,4 +1,4 @@
-# Home task for Module 1
+# Home task for Module 1 - Python Basics
 # Create list of 100 random numbers from 0 to 1000
 import random  # Import of random module for using of random function
 
