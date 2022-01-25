@@ -23,10 +23,16 @@ for i in range(len(listOfRandom)):  # Define FOR statement with number of iterat
 for i in range(len(evenNumbers)):  # Define of FOR statement with range equal to even numbers list length
     total = 0  # Define of variable for calculation of total with 0 value
     total = total + evenNumbers[i]  # Calculation of total sum
-evenAverage = total / len(evenNumbers)  # Calculation of average even number
+try:  # Zero division error handling
+    evenAverage = total / len(evenNumbers)  # Calculation of average even number
+except ZeroDivisionError:  # In case of zero division error
+    print('Zero division error.')  # Printing message
 for i in range(len(oddNumbers)):  # Define of FOR statement with range equal to odd numbers list length
     total = 0  # Clearing of total with 0 value
     total = total + oddNumbers[i]  # Calculation of total sum
-oddAverage = total / len(oddNumbers)  # Calculation of average odd number
+try:  # Zero division error handling
+    oddAverage = total / len(oddNumbers)  # Calculation of average odd number
+except ZeroDivisionError:   # In case of zero division error
+    print('Zero division error.')  # Printing message
 print('Average count of even numbers:', evenAverage)  # Printing of average of even numbers to console
 print('Average count of odd numbers:', oddAverage)  # Printing of average of odd numbers to console
